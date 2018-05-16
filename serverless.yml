@@ -13,6 +13,7 @@ provider:
 package:
   include:
     - dependencies/**
+    - catfacts/**
     - show.py
     - catfacts.json
   exclude:
@@ -34,7 +35,7 @@ package:
 
 functions:
   show:
-    handler: show.handler
+    handler: catfacts/show.handler
     description: awesommmeeeeeeeeeeeeeeeeeeeeeeeeeee
     events:
       - http: 
