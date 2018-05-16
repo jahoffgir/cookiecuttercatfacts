@@ -1,0 +1,10 @@
+{
+  "name": "cookiecuttercatfacts",
+  "dependencies": {
+    "serverless": "^1.26.1",
+    "serverless-log-forwarding": "^1.1.5",
+    "serverless-python-requirements": "^3.0.7",
+    "serverless-pseudo-parameters": "^1.4.2",
+    "serverless-domain-manager": "^2.3.4"
+  }
+}

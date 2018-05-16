@@ -1,0 +1,5 @@
+dev:
+  domain: aws.wgen.net
+
+prod:
+  domain: production.wgen.net
