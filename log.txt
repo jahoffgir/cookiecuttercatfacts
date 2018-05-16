@@ -1,0 +1,256 @@
+lint_unit installed: astroid==1.6.4,-e git+git@github.com:jahoffgir/cookiecuttercatfacts.git@c7627c62caf400c7dca61c85911cffe7b560a9bc#egg=cookiecuttercatfacts,cov-core==1.15.0,coverage==4.5.1,isort==4.3.4,lazy-object-proxy==1.3.1,mccabe==0.6.1,mock==1.3.0,nose==1.3.7,nose-cov==1.6,pbr==4.0.3,pycodestyle==2.4.0,pylint==1.9.1,six==1.11.0,wrapt==1.10.11
+lint_unit runtests: PYTHONHASHSEED='681108208'
+lint_unit runtests: commands[0] | pip install --upgrade -r requirements.pip -r test-requirements.pip -e .
+Looking in indexes: https://python-repo.mc.wgenhq.net/pypi/simple
+Obtaining file:///Users/jamirkulov/repos/cookiecuttercatfacts
+Requirement already up-to-date: pylint in ./.tox/workdir/lib/python3.6/site-packages (from -r test-requirements.pip (line 2)) (1.9.1)
+Requirement already up-to-date: pycodestyle in ./.tox/workdir/lib/python3.6/site-packages (from -r test-requirements.pip (line 3)) (2.4.0)
+Requirement already up-to-date: nose<2,>=1.1 in ./.tox/workdir/lib/python3.6/site-packages (from -r test-requirements.pip (line 5)) (1.3.7)
+Requirement already up-to-date: nose-cov<2,>=1.5 in ./.tox/workdir/lib/python3.6/site-packages (from -r test-requirements.pip (line 6)) (1.6)
+Requirement already up-to-date: mock<2,>=1.0.1 in ./.tox/workdir/lib/python3.6/site-packages (from -r test-requirements.pip (line 7)) (1.3.0)
+Requirement already up-to-date: coverage<5,>=4.5.1 in ./.tox/workdir/lib/python3.6/site-packages (from -r test-requirements.pip (line 8)) (4.5.1)
+Requirement not upgraded as not directly required: six in ./.tox/workdir/lib/python3.6/site-packages (from pylint->-r test-requirements.pip (line 2)) (1.11.0)
+Requirement not upgraded as not directly required: isort>=4.2.5 in ./.tox/workdir/lib/python3.6/site-packages (from pylint->-r test-requirements.pip (line 2)) (4.3.4)
+Requirement not upgraded as not directly required: mccabe in ./.tox/workdir/lib/python3.6/site-packages (from pylint->-r test-requirements.pip (line 2)) (0.6.1)
+Requirement not upgraded as not directly required: astroid<2.0,>=1.6 in ./.tox/workdir/lib/python3.6/site-packages (from pylint->-r test-requirements.pip (line 2)) (1.6.4)
+Requirement not upgraded as not directly required: cov-core>=1.6 in ./.tox/workdir/lib/python3.6/site-packages (from nose-cov<2,>=1.5->-r test-requirements.pip (line 6)) (1.15.0)
+Requirement not upgraded as not directly required: pbr>=0.11 in ./.tox/workdir/lib/python3.6/site-packages (from mock<2,>=1.0.1->-r test-requirements.pip (line 7)) (4.0.3)
+Requirement not upgraded as not directly required: wrapt in ./.tox/workdir/lib/python3.6/site-packages (from astroid<2.0,>=1.6->pylint->-r test-requirements.pip (line 2)) (1.10.11)
+Requirement not upgraded as not directly required: lazy-object-proxy in ./.tox/workdir/lib/python3.6/site-packages (from astroid<2.0,>=1.6->pylint->-r test-requirements.pip (line 2)) (1.3.1)
+Installing collected packages: cookiecuttercatfacts
+  Found existing installation: cookiecuttercatfacts 0.0.0
+    Uninstalling cookiecuttercatfacts-0.0.0:
+      Successfully uninstalled cookiecuttercatfacts-0.0.0
+  Running setup.py develop for cookiecuttercatfacts
+Successfully installed cookiecuttercatfacts
+lint_unit runtests: commands[1] | pylint --rcfile=pylintrc --output-format=colorized cookiecuttercatfacts test
+Using config file /Users/jamirkulov/repos/cookiecuttercatfacts/pylintrc
+
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+
+lint_unit runtests: commands[2] | pycodestyle cookiecuttercatfacts test
+lint_unit runtests: commands[3] | nosetests --config=tox.ini --processes=-1 cookiecuttercatfacts test/unit
+nose.config: INFO: Ignoring files matching ['^\\.', '^_', '^setup\\.py$']
+nose.plugins.cover: INFO: Coverage report will include only packages: ['cookiecuttercatfacts']
+Sample passing test ... ok
+
+Name    Stmts   Miss  Cover
+---------------------------
+Process Process-3:
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/jamirkulov/repos/cookiecuttercatfacts/.tox/workdir/lib/python3.6/site-packages/nose/plugins/multiprocess.py", line 652, in runner
+    keyboardCaught, shouldStop, loaderClass, resultClass, config)
+  File "/Users/jamirkulov/repos/cookiecuttercatfacts/.tox/workdir/lib/python3.6/site-packages/nose/plugins/multiprocess.py", line 700, in __runner
+    for test_addr, arg in iter(get, 'STOP'):
+  File "/Users/jamirkulov/repos/cookiecuttercatfacts/.tox/workdir/lib/python3.6/site-packages/nose/plugins/multiprocess.py", line 675, in get
+    return testQueue.get(timeout=config.multiprocess_timeout)
+  File "<string>", line 2, in get
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/managers.py", line 757, in _callmethod
+    kind, result = conn.recv()
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/connection.py", line 383, in _recv
+    raise EOFError
+EOFError
+Process Process-4:
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/jamirkulov/repos/cookiecuttercatfacts/.tox/workdir/lib/python3.6/site-packages/nose/plugins/multiprocess.py", line 652, in runner
+    keyboardCaught, shouldStop, loaderClass, resultClass, config)
+  File "/Users/jamirkulov/repos/cookiecuttercatfacts/.tox/workdir/lib/python3.6/site-packages/nose/plugins/multiprocess.py", line 700, in __runner
+    for test_addr, arg in iter(get, 'STOP'):
+  File "/Users/jamirkulov/repos/cookiecuttercatfacts/.tox/workdir/lib/python3.6/site-packages/nose/plugins/multiprocess.py", line 675, in get
+    return testQueue.get(timeout=config.multiprocess_timeout)
+  File "<string>", line 2, in get
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/managers.py", line 757, in _callmethod
+    kind, result = conn.recv()
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/connection.py", line 383, in _recv
+    raise EOFError
+EOFError
+Process Process-2:
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/jamirkulov/repos/cookiecuttercatfacts/.tox/workdir/lib/python3.6/site-packages/nose/plugins/multiprocess.py", line 652, in runner
+    keyboardCaught, shouldStop, loaderClass, resultClass, config)
+  File "/Users/jamirkulov/repos/cookiecuttercatfacts/.tox/workdir/lib/python3.6/site-packages/nose/plugins/multiprocess.py", line 700, in __runner
+    for test_addr, arg in iter(get, 'STOP'):
+  File "/Users/jamirkulov/repos/cookiecuttercatfacts/.tox/workdir/lib/python3.6/site-packages/nose/plugins/multiprocess.py", line 675, in get
+    return testQueue.get(timeout=config.multiprocess_timeout)
+  File "<string>", line 2, in get
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/managers.py", line 757, in _callmethod
+    kind, result = conn.recv()
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/connection.py", line 383, in _recv
+    raise EOFError
+EOFError
+Process Process-7:
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/jamirkulov/repos/cookiecuttercatfacts/.tox/workdir/lib/python3.6/site-packages/nose/plugins/multiprocess.py", line 652, in runner
+    keyboardCaught, shouldStop, loaderClass, resultClass, config)
+  File "/Users/jamirkulov/repos/cookiecuttercatfacts/.tox/workdir/lib/python3.6/site-packages/nose/plugins/multiprocess.py", line 700, in __runner
+    for test_addr, arg in iter(get, 'STOP'):
+  File "/Users/jamirkulov/repos/cookiecuttercatfacts/.tox/workdir/lib/python3.6/site-packages/nose/plugins/multiprocess.py", line 675, in get
+    return testQueue.get(timeout=config.multiprocess_timeout)
+  File "<string>", line 2, in get
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/managers.py", line 757, in _callmethod
+    kind, result = conn.recv()
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/connection.py", line 383, in _recv
+    raise EOFError
+EOFError
+Process Process-5:
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/jamirkulov/repos/cookiecuttercatfacts/.tox/workdir/lib/python3.6/site-packages/nose/plugins/multiprocess.py", line 652, in runner
+    keyboardCaught, shouldStop, loaderClass, resultClass, config)
+  File "/Users/jamirkulov/repos/cookiecuttercatfacts/.tox/workdir/lib/python3.6/site-packages/nose/plugins/multiprocess.py", line 700, in __runner
+    for test_addr, arg in iter(get, 'STOP'):
+  File "/Users/jamirkulov/repos/cookiecuttercatfacts/.tox/workdir/lib/python3.6/site-packages/nose/plugins/multiprocess.py", line 675, in get
+    return testQueue.get(timeout=config.multiprocess_timeout)
+  File "<string>", line 2, in get
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/managers.py", line 757, in _callmethod
+    kind, result = conn.recv()
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/connection.py", line 383, in _recv
+    raise EOFError
+EOFError
+Process Process-6:
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/jamirkulov/repos/cookiecuttercatfacts/.tox/workdir/lib/python3.6/site-packages/nose/plugins/multiprocess.py", line 652, in runner
+    keyboardCaught, shouldStop, loaderClass, resultClass, config)
+  File "/Users/jamirkulov/repos/cookiecuttercatfacts/.tox/workdir/lib/python3.6/site-packages/nose/plugins/multiprocess.py", line 700, in __runner
+    for test_addr, arg in iter(get, 'STOP'):
+  File "/Users/jamirkulov/repos/cookiecuttercatfacts/.tox/workdir/lib/python3.6/site-packages/nose/plugins/multiprocess.py", line 675, in get
+    return testQueue.get(timeout=config.multiprocess_timeout)
+  File "<string>", line 2, in get
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/managers.py", line 757, in _callmethod
+    kind, result = conn.recv()
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/connection.py", line 383, in _recv
+    raise EOFError
+EOFError
+Process Process-8:
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/managers.py", line 749, in _callmethod
+    conn = self._tls.connection
+AttributeError: 'ForkAwareLocal' object has no attribute 'connection'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/jamirkulov/repos/cookiecuttercatfacts/.tox/workdir/lib/python3.6/site-packages/nose/plugins/multiprocess.py", line 652, in runner
+    keyboardCaught, shouldStop, loaderClass, resultClass, config)
+  File "/Users/jamirkulov/repos/cookiecuttercatfacts/.tox/workdir/lib/python3.6/site-packages/nose/plugins/multiprocess.py", line 700, in __runner
+    for test_addr, arg in iter(get, 'STOP'):
+  File "/Users/jamirkulov/repos/cookiecuttercatfacts/.tox/workdir/lib/python3.6/site-packages/nose/plugins/multiprocess.py", line 675, in get
+    return testQueue.get(timeout=config.multiprocess_timeout)
+  File "<string>", line 2, in get
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/managers.py", line 753, in _callmethod
+    self._connect()
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/managers.py", line 740, in _connect
+    conn = self._Client(self._token.address, authkey=self._authkey)
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/connection.py", line 487, in Client
+    c = SocketClient(address)
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/connection.py", line 614, in SocketClient
+    s.connect(address)
+FileNotFoundError: [Errno 2] No such file or directory
+Process Process-9:
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/managers.py", line 749, in _callmethod
+    conn = self._tls.connection
+AttributeError: 'ForkAwareLocal' object has no attribute 'connection'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/jamirkulov/repos/cookiecuttercatfacts/.tox/workdir/lib/python3.6/site-packages/nose/plugins/multiprocess.py", line 652, in runner
+    keyboardCaught, shouldStop, loaderClass, resultClass, config)
+  File "/Users/jamirkulov/repos/cookiecuttercatfacts/.tox/workdir/lib/python3.6/site-packages/nose/plugins/multiprocess.py", line 700, in __runner
+    for test_addr, arg in iter(get, 'STOP'):
+  File "/Users/jamirkulov/repos/cookiecuttercatfacts/.tox/workdir/lib/python3.6/site-packages/nose/plugins/multiprocess.py", line 675, in get
+    return testQueue.get(timeout=config.multiprocess_timeout)
+  File "<string>", line 2, in get
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/managers.py", line 753, in _callmethod
+    self._connect()
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/managers.py", line 740, in _connect
+    conn = self._Client(self._token.address, authkey=self._authkey)
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/connection.py", line 487, in Client
+    c = SocketClient(address)
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/connection.py", line 614, in SocketClient
+    s.connect(address)
+FileNotFoundError: [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "/Users/jamirkulov/repos/cookiecuttercatfacts/.tox/workdir/bin/nosetests", line 11, in <module>
+    sys.exit(run_exit())
+  File "/Users/jamirkulov/repos/cookiecuttercatfacts/.tox/workdir/lib/python3.6/site-packages/nose/core.py", line 121, in __init__
+    **extra_args)
+  File "/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/unittest/main.py", line 95, in __init__
+    self.runTests()
+  File "/Users/jamirkulov/repos/cookiecuttercatfacts/.tox/workdir/lib/python3.6/site-packages/nose/core.py", line 207, in runTests
+    result = self.testRunner.run(self.test)
+  File "/Users/jamirkulov/repos/cookiecuttercatfacts/.tox/workdir/lib/python3.6/site-packages/nose/plugins/multiprocess.py", line 501, in run
+    result.printErrors()
+  File "/Users/jamirkulov/repos/cookiecuttercatfacts/.tox/workdir/lib/python3.6/site-packages/nose/result.py", line 110, in printErrors
+    self.config.plugins.report(self.stream)
+  File "/Users/jamirkulov/repos/cookiecuttercatfacts/.tox/workdir/lib/python3.6/site-packages/nose/plugins/manager.py", line 99, in __call__
+    return self.call(*arg, **kw)
+  File "/Users/jamirkulov/repos/cookiecuttercatfacts/.tox/workdir/lib/python3.6/site-packages/nose/plugins/manager.py", line 167, in simple
+    result = meth(*arg, **kw)
+  File "/Users/jamirkulov/repos/cookiecuttercatfacts/.tox/workdir/lib/python3.6/site-packages/nose/plugins/cover.py", line 183, in report
+    self.coverInstance.stop()
+  File "/Users/jamirkulov/repos/cookiecuttercatfacts/.tox/workdir/lib/python3.6/site-packages/coverage/control.py", line 1045, in report
+    return reporter.report(morfs, outfile=file)
+  File "/Users/jamirkulov/repos/cookiecuttercatfacts/.tox/workdir/lib/python3.6/site-packages/coverage/summary.py", line 158, in report
+    raise CoverageException("No data to report.")
+coverage.misc.CoverageException: No data to report.
+ERROR: InvocationError for command '/Users/jamirkulov/repos/cookiecuttercatfacts/.tox/workdir/bin/nosetests --config=tox.ini --processes=-1 cookiecuttercatfacts test/unit' (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   lint_unit: commands failed
