@@ -13,9 +13,6 @@ provider:
 package:
   include:
     - dependencies/**
-    - catfacts/**
-    - show.py
-    - catfacts.json
   exclude:
     - .coverage
     - .git
@@ -35,8 +32,8 @@ package:
 
 functions:
   show:
-    handler: catfacts/show.handler
-    description: awesommmeeeeeeeeeeeeeeeeeeeeeeeeeee
+    handler: cookiecuttercatfacts/handlers/show.handler
+    description: awesome
     events:
       - http: 
           path: /
